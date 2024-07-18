@@ -1,9 +1,10 @@
 ﻿void PrintArr(string[] arr)
 {
-    foreach (var e in arr);
+    foreach (var item in arr)
     {
-        System.Console.Write($"{e}, ");
+        System.Console.Write($"{item}, ");
     }
+    Console.Write("\b\b ");
     System.Console.WriteLine();
 }
 
@@ -30,8 +31,22 @@ string[] arr = ArrayElements(a);
 int b = 0;
 foreach (var item in arr)
 {
-    if item.Length =< 3
+    if (item.Length <= 3)
+    {
         b = b + 1;
+    }
+        
 }
 
+string[] FinalArray = new string[b];
+int j = 0;
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i].Length <= 3)
+    {
+        FinalArray[j] = arr[i];
+        j++;
+    }
+}
 
+PrintArr(FinalArray);
