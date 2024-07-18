@@ -26,4 +26,12 @@ int a = Convert.ToInt32(Console.ReadLine());
 
 string[] arr = ArrayElements(a);
 
-Console.WriteLine(arr);
+
+int b = 0;
+foreach (var item in arr)
+{
+    if item.Length =< 3
+        b = b + 1;
+}
+
+
