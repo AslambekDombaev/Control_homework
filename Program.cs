@@ -1,4 +1,12 @@
-﻿
+﻿void PrintArr(string[] arr)
+{
+    foreach (var e in arr);
+    {
+        System.Console.Write($"{e}, ");
+    }
+    System.Console.WriteLine();
+}
+
 
 string[] ArrayElements(int b)
 {
